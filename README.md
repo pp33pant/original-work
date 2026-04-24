@@ -1,35 +1,40 @@
-# Selected AI Deployment, Research Systems, and Causal Modeling Projects
+# Original Work: AI Deployment, Decision Workflows, and Research Systems
 
-This repository is being repositioned as a curated portfolio of selected professional and academic projects rather than a single-project research repository.
+This repository is a landing page for selected professional and academic projects viewed through an applied AI and Forward Deployment Engineer lens.
 
-Across industry and academic settings, the common thread in my work is translating ambiguous problems into structured workflows, reliable decision surfaces, and reproducible analytical systems. Some entries below link to public notebooks in this repository. Other entries summarize workflows whose full code or data cannot be released because of client confidentiality or ongoing research constraints.
+The common thread across these projects is not one model family or one research domain. It is end-to-end delivery: taking ambiguous stakeholder problems, defining the right system boundary, building human-in-the-loop workflows, validating the outputs, and shipping an inspectable surface that other people can use.
 
-## What This Repository Now Covers
+If you arrived here from my resume, the fastest way to read this page is:
 
-This README is organized around two kinds of work:
+1. Start with [Professional Experience](#professional-experience).
+2. Open the public notebooks linked under Sunflower and Causal Representation Learning.
+3. Use the academic sections to see the workflow-design and validation layer behind the research work.
 
-1. Professional experience: AI deployment, human-in-the-loop decision workflows, and stakeholder-driven system design.
-2. Academic experience: multimodal research systems, hybrid data integration, causal inference, and representation learning.
+## What This Page Is For
 
-The emphasis is on workflow design, problem framing, validation, and delivery rather than on listing tools in isolation.
+This README is not a full CV and not a dump of raw research notes. It is a project portfolio page organized around two buckets of work:
 
-## At a Glance
+1. Professional experience: customer-facing deployment, decision workflows, and operator-aware AI systems.
+2. Academic experience: multimodal research systems, hybrid data integration, causal inference, and reproducibility-oriented delivery.
 
-| Area | Project | Core focus | Public artifact |
-| --- | --- | --- | --- |
-| Professional | Fairlane Group / Libertas Funding | AI-assisted underwriting workflow redesign | Confidential summary only |
-| Professional | Sunflower AI Labs | Creator and sponsor decision workflow | [topic_themes.ipynb](topic_themes.ipynb) |
-| Academic | Multimodal Causal Workflow for Oral Histories | Multimodal causal research system design | Summary here |
-| Academic | University of Oxford / Said Business School | Hybrid structured-textual data integration and validated causal workflows | [Related paper](https://doi.org/10.1007/s11577-025-01045-6) |
-| Academic | Causal Representation Learning | Representation learning for causal adjustment and estimation | [causal_representation_learning.ipynb](causal_representation_learning.ipynb) |
-| Academic | Harvard University and Brown University | Validation-first observational research workflows | [Related paper](https://journals.sagepub.com/eprint/JMTX4WJKGRIHIUIGVPKS/full) |
+## What I Tend To Deliver End To End
 
-## How To Read This Repository
+- Discovery with operators, stakeholders, or domain users rather than model-first prototyping.
+- Workflow and system-boundary design over messy structured and unstructured data.
+- Human-in-the-loop AI systems with explicit review, exception handling, and release constraints.
+- Validation, robustness, and audit surfaces strong enough for downstream users to trust the output.
+- Public or reusable artifacts such as notebooks, codebooks, rerun wrappers, and documentation.
 
-- Public notebooks show representative technical components of larger workflows.
-- Industry projects are described at the workflow and delivery level when source code is proprietary.
-- Academic projects are described as systems work as well as research work: problem framing, measurement design, validation, and reproducibility are part of the story.
-- This README is intentionally written as a professional project portfolio, not as a full CV.
+## Portfolio Map
+
+| Area | Project | Delivery focus | Engineering focus | Public artifact |
+| --- | --- | --- | --- | --- |
+| Professional | Fairlane Group / Libertas Funding | AI-assisted underwriting workflow redesign | LangChain / LangGraph, Python, SQL, Redshift-backed workflows | Confidential summary only |
+| Professional | Sunflower AI Labs | Creator strategy and sponsor-matching workflow | Chunking, embeddings, clustering, retrieval, LLM-grounded theme labeling | [topic_themes.ipynb](topic_themes.ipynb) |
+| Academic | Multimodal Causal Workflow for Oral Histories | Multimodal causal research system | Transcript/audio/video retrieval, fusion design, codebooks, rerun wrappers | Summary here |
+| Academic | University of Oxford / Said Business School | Hybrid structured-textual analysis workflow | API ingestion, entity reconciliation, timing alignment, DML validation | [Related paper](https://doi.org/10.1007/s11577-025-01045-6) |
+| Academic | Causal Representation Learning | Representation learning inside causal estimation | Transformer embeddings, dimensionality reduction, cross-fitted DML, balance-aware extension | [causal_representation_learning.ipynb](causal_representation_learning.ipynb) |
+| Academic | Harvard University and Brown University | Validation-first observational workflows | Doubly robust ML, multilevel models, demographic simulation | [Related paper](https://journals.sagepub.com/eprint/JMTX4WJKGRIHIUIGVPKS/full) |
 
 ## Professional Experience
 
@@ -37,25 +42,33 @@ The emphasis is on workflow design, problem framing, validation, and delivery ra
 
 **Role:** Data Scientist / AI Engineer  
 **Period:** Mar 2025 - Sep 2025  
-**Setting:** Customer-facing AI deployment work with Libertas Funding underwriting operations
+**Setting:** Customer-facing AI deployment with Libertas Funding underwriting operations
 
-#### Problem
+#### Context
 
-Libertas Funding's underwriting process depended on heavy manual verification across borrower diligence, bank-statement review, front-end intake, Amazon Redshift-backed data storage, and downstream risk review. The challenge was not just model quality; it was that critical evidence handling and structured data capture were still bottlenecked by manual operational workflows.
+Libertas Funding's underwriting process relied on heavy manual verification across borrower diligence, bank-statement review, front-end intake, Redshift-backed data storage, and downstream risk review. The main problem was not just predictive modeling. It was that key evidence capture and review logic were still trapped inside manual operating steps.
 
-#### What I built
+#### End-to-end delivery
 
-- Embedded with leadership, processors, and underwriters to map the live underwriting workflow and identify the highest-friction verification steps.
-- Designed a LangChain / LangGraph orchestration layer, supported by Python and SQL workflows over 3M+ loan records, to assist information verification, sector classification, structured data capture, and routing of richer evidence into downstream review.
-- Helped move the system from small-sample pilot and stakeholder demonstration to authorized full-sample rollout and deployment in a next-generation underwriting workflow.
+1. Embedded with leadership, processors, and underwriters in the live workflow to identify the highest-friction verification and data-entry bottlenecks.
+2. Translated those bottlenecks into a scoped orchestration problem rather than a vague "apply AI to underwriting" prompt.
+3. Designed an assistive workflow that fit into existing review practices instead of pretending the lending decision could be fully automated.
+4. Moved the solution from pilot and stakeholder demo to authorized full-sample rollout inside a next-generation underwriting workflow.
 
-#### Why it matters
+#### Technical engineering details
 
-This project is representative of customer-embedded, human-in-the-loop deployment work. The main value was translating vague interest in "using AI in underwriting" into a governed operational workflow with clear system boundaries, review points, and rollout logic.
+- Built a LangChain / LangGraph orchestration layer supported by Python and SQL workflows over 3M+ loan records.
+- Routed richer unstructured evidence into downstream review while preserving structured capture for verification and sector classification.
+- Worked across front-end intake, operational review, and Redshift-backed data systems instead of treating the problem as a notebook-only exercise.
+- Kept the workflow human-in-the-loop, with underwriters and processors remaining the accountable decision layer.
+
+#### Why this is here
+
+This project is representative of the kind of FDE-style work I care about most: customer-embedded discovery, workflow redesign in a high-consequence environment, and delivery of a governed system that fits real operations.
 
 #### Public artifact note
 
-The underlying production workflow and client data are confidential. For that reason, this repository documents the project at the workflow-design level rather than releasing source code.
+The underlying production workflow and client data are confidential. This page therefore documents the project at the delivery and system-design level rather than releasing source code.
 
 ### Sunflower AI Labs
 
@@ -63,34 +76,27 @@ The underlying production workflow and client data are confidential. For that re
 **Period:** Oct 2024 - Present  
 **Setting:** AI-native creator intelligence and sponsor-matching workflow design
 
-#### Problem
+#### Context
 
-This work started from a two-sided marketplace problem rather than a narrow analytics problem. Creators needed better guidance on what content would improve viewership, subscription growth, and monetization. Sponsors and MCNs needed more reliable creator matching and stronger return on ad spend.
+This work started from a two-sided marketplace problem, not a generic analytics request. Creators needed better guidance on what to make next in order to improve viewership, subscription growth, and monetization. Sponsors and MCNs needed stronger creator matching and more reliable decision support than platform-native heuristics.
 
-#### What I built
+#### End-to-end delivery
 
-- Interviewed creators and sponsors / MCNs in the US and Thailand to translate monetization and creator-matching pain points into a shared decision workflow.
-- Built a human-in-the-loop content-intelligence workflow over comments, transcripts, and metadata to define actionable audience layers and benchmark creator performance.
-- Organized the workflow around a core / community / crowd audience taxonomy so that noisy feedback data could be turned into usable recommendation signals rather than left as raw engagement metrics.
-- Delivered creator recommendations, sponsor-matching signals, and LLM-assisted scripting support at workflow scale.
+1. Interviewed creators and sponsors / MCNs in the US and Thailand to define the actual decision problem on both sides of the market.
+2. Converted comments, transcripts, and metadata into an audience-segmented content-intelligence workflow rather than leaving them as raw engagement exhaust.
+3. Built decision surfaces for two user groups: creator-side strategy and sponsor / MCN-side creator selection.
+4. Extended the workflow from analysis into semi-automated execution support through report generation and LLM-assisted scripting.
 
-#### Outputs and impact
+#### Technical engineering details
 
-- Supported recommendation and reporting workflows across approximately 300 creators.
-- Contributed to observed improvements of approximately 40% in subscription growth and viewership.
-- Created decision surfaces for two user groups: creator-side content strategy and sponsor / MCN-side creator selection.
+- Organized the workflow around a core / community / crowd audience taxonomy so recommendation logic had a stable operational representation.
+- Used chunking, embeddings, clustering, centroid assignment, retrieval, and LLM-grounded naming to turn noisy creator-content data into canonical themes.
+- The public notebook [topic_themes.ipynb](topic_themes.ipynb) shows representative pieces of that workflow, including HDBSCAN or KMeans clustering, centroid storage, reassignment of new chunks to existing themes, FAISS-backed retrieval, and grounded LLM label generation.
+- Delivered recommendation reports, sponsor-matching signals, and LLM-assisted scripting support across approximately 300 creators, with observed improvements of approximately 40% in subscription growth and viewership.
 
-#### Public artifact
+#### Why this is here
 
-The notebook [topic_themes.ipynb](topic_themes.ipynb) is a representative public artifact from this work. It shows part of the theme-building workflow used to:
-
-- cluster creator-content chunks into canonical themes,
-- compute sector-level centroids,
-- assign new content to existing themes,
-- propose new themes for unmatched clusters, and
-- use retrieval plus LLM grounding to generate readable theme labels.
-
-The notebook is not the entire delivery system, but it captures an important technical slice of the underlying workflow.
+This project is a strong example of FDE-relevant work because it starts from cross-functional business pain points, defines a shared workflow boundary, and ships usable decision support rather than stopping at an analysis notebook.
 
 ## Academic Experience
 
@@ -99,25 +105,28 @@ The notebook is not the entire delivery system, but it captures an important tec
 **Focus:** Public-source multimodal research system design for transcript, audio, and video inputs  
 **Research question:** How does adolescent exposure to state coercive incarceration shape later-life state-person narratives?
 
-#### Problem
+#### Context
 
-This project was not a simple text-analysis exercise. The core challenge was to turn public oral history materials into a multimodal causal workflow that could preserve interpretive richness while still supporting explicit measurement, causal estimation, robustness checks, and replication.
+This was not a simple text-analysis project. The hard part was first-principles workflow design: deciding how public transcripts, audio, and video should be represented, aligned, retrieved, fused, validated, and ultimately turned into a causal-ready and replication-ready system.
 
-#### What I built
+#### End-to-end delivery
 
-- Reframed oral histories as multimodal social data rather than illustrative testimony.
-- Defined a `what x how` outcome architecture that separates substantive injury type from narrative composure.
-- Designed a workflow spanning transcript, audio, and video representation, retrieval, alignment, fusion, scoring, validation, and causal estimation.
-- Structured the system as an orchestrator-skills-outputs workflow with explicit human-versus-AI handoffs, deterministic cleaning stages, audit layers, and release boundaries.
-- Treated replication materials as part of the deliverable: versioned scripts, rerun wrappers, manifests, codebooks, and human-readable validation surfaces.
+1. Reframed oral histories as multimodal social data rather than illustrative testimony.
+2. Defined the core measurement architecture around a `what x how` outcome schema separating substantive injury type from narrative composure.
+3. Designed an orchestrator-skills-outputs workflow spanning deterministic cleaning, multimodal representation, retrieval, scoring, validation, and causal estimation.
+4. Added explicit human-versus-AI handoffs, audit layers, and release boundaries so the workflow could be inspected rather than trusted as a black box.
+5. Treated replication materials as a formal deliverable: versioned scripts, rerun wrappers, manifests, codebooks, and validation documents.
 
-#### Why it matters
+#### Technical engineering details
 
-This project shows the part of academic work that is most transferable to AI systems and forward deployment work: taking a poorly pre-defined problem, defining the correct units of analysis, deciding where AI can assist and where operator control must remain, and packaging the final workflow so that other people can inspect, rerun, and trust it.
+- Worked across transcript, audio, and video modalities rather than collapsing everything into text-only features.
+- Had to decide per-modality retrieval paths, alignment logic, embedding strategy, and where fusion should happen.
+- Built the project around governed execution surfaces instead of only model outputs: codebooks, manifests, containerized rerun paths, and validation packages.
+- Used the workflow itself as a public-facing artifact so other researchers could learn from the research design rather than only consuming final results.
 
-#### Public artifact note
+#### Why this is here
 
-The current public repository does not yet include the full multimodal workflow stack. This README therefore summarizes the project at the systems and research-design level.
+This project matters in an FDE context because it shows problem framing under ambiguity, multimodal workflow design, explicit operator control, and delivery of an inspectable surface that can be rerun and audited.
 
 ### University of Oxford / Said Business School
 
@@ -125,46 +134,49 @@ The current public repository does not yet include the full multimodal workflow 
 **Period:** 2022 - Mar 2026  
 **Related paper:** [Diplomats, political ties, and FDI](https://doi.org/10.1007/s11577-025-01045-6)
 
-#### Problem
+#### Context
 
-The substantive question was how diplomats' experience and networks shaped FDI outcomes. The technical challenge was to connect structured economic and financial data with much messier biographical and career-history information in a way that made downstream analysis credible.
+The substantive question was how diplomats' experience and networks shaped FDI outcomes. The technical challenge was to connect structured economic and financial data with much messier biographical and career-history information in a way that downstream analysis could actually trust.
 
-#### What I built
+#### End-to-end delivery
 
-- Integrated API-accessible FDI, macroeconomic, market, and firm data with manually normalized diplomat biographies and career histories.
-- Resolved entity and timing conflicts across diplomats, countries, firms, and time windows.
-- Built hybrid workflows that combined structured ingestion where data were standardized with manual cleaning and reconciliation where biographical records were text-heavy or inconsistent.
-- Produced inspectable datasets and readout surfaces for downstream diplomat-network and FDI analysis.
-- Extended the modeling workflow into validation-heavy causal inference using DML, causal representation learning, and external-validity checks.
+1. Collected and aligned structured FDI, macroeconomic, market, and firm data.
+2. Manually normalized diplomat biographies and career histories where source systems were too inconsistent for blind automation.
+3. Resolved entity and timing conflicts across diplomats, countries, firms, and time windows.
+4. Converted the reconciled system into inspectable datasets and readout surfaces for downstream analysis.
+5. Extended the workflow into validation-heavy causal inference rather than stopping at descriptive integration.
 
-#### Why it matters
+#### Technical engineering details
 
-This work is representative of hybrid workflow design over mixed-structure data sources. It required judgment about automation boundaries, schema alignment, temporal reconciliation, and delivery of outputs trustworthy enough for others to inspect and use.
+- Combined API-accessible structured ingestion with manual reconciliation where textual records were the real bottleneck.
+- Used DML, causal representation learning, and external-validity checks as part of a validated workflow, not as isolated methods.
+- Built readout layers that made the reconciled outputs inspectable enough for downstream users to review and use.
+- Treated the main engineering problem as hybrid workflow design across mixed-structure data sources.
+
+#### Why this is here
+
+This work shows the system-design side of research: selective automation, schema reconciliation, temporal alignment, and trustworthy downstream delivery over messy heterogeneous sources.
 
 ### Causal Representation Learning
 
 **Focus:** Representation learning for causal adjustment and high-dimensional estimation  
 **Public artifact:** [causal_representation_learning.ipynb](causal_representation_learning.ipynb)
 
-#### What the notebook covers
+#### What this notebook does
 
-This notebook is a public methodological artifact that explores how textual representations can be used inside causal workflows rather than treated as standalone embeddings.
+This notebook is a public methodological artifact exploring how textual representations can be used inside causal workflows rather than treated as generic embeddings.
 
-It currently includes:
+#### Technical engineering details
 
-- simulation of biography-like text data with embedded confounding structure,
-- transformer-based text embedding extraction,
-- dimensionality reduction into learned deconfounders,
-- cross-fitted DML estimation for average treatment effects, and
-- a sketched extension toward balance-aware representation learning using a CORAL-style objective.
+- Simulates biography-like text data with embedded confounding structure.
+- Extracts transformer-based embeddings from text.
+- Compresses those representations into learned deconfounders through dimensionality reduction.
+- Runs cross-fitted DML to estimate average treatment effects.
+- Sketches a balance-aware extension using a CORAL-style objective to better align representation learning with causal adjustment goals.
 
-#### Why it matters
+#### Why this is here
 
-The main point of this notebook is not just that it runs a model. It demonstrates a line of work I care about more broadly: connecting representation learning to careful causal reasoning, identifiability discipline, and interpretable downstream estimation.
-
-#### Relationship to the wider portfolio
-
-This notebook should be read as a public research artifact that complements the Oxford doctoral workflow. It shows the modeling side of a broader effort to make high-dimensional causal estimation more reliable and more usable.
+This notebook is representative of a broader pattern in my work: using representation learning as part of a disciplined estimation workflow with identifiability, stability, and interpretability in view.
 
 ### Harvard University and Brown University
 
@@ -172,36 +184,41 @@ This notebook should be read as a public research artifact that complements the 
 **Period:** 2018 - 2020  
 **Related paper:** [Higher Education and the Black-White Earnings Gap](https://journals.sagepub.com/eprint/JMTX4WJKGRIHIUIGVPKS/full)
 
-#### Problem
+#### Context
 
-These projects involved observational labor-market and migration research where the main challenge was not just estimation, but building analytical workflows that could turn noisy real-world data into reproducible and externally reviewable findings.
+These projects involved observational labor-market and migration research where the main challenge was not just estimation, but building workflows that could turn noisy real-world data into reproducible and externally reviewable outputs.
 
-#### What I built
+#### End-to-end delivery
 
-- Built and validated analytical workflows for work on higher education and Black-White earnings inequality.
-- Contributed multilevel modeling and dynamic demographic simulation workflows for migration research.
-- Used doubly robust ML, multilevel models, and simulation not as ends in themselves, but as tools inside validation-first evidence-generation workflows.
+1. Structured observational data into validation-first analytical workflows.
+2. Generated reproducible outputs on higher education and Black-White earnings inequality.
+3. Extended the workflow family into migration work using multilevel models and dynamic demographic simulations.
 
-#### Why it matters
+#### Technical engineering details
 
-This experience trained the habits that continue to shape my later work: formalizing messy problems, validating outputs under observational uncertainty, and making technically complex results legible enough for other people to inspect and use.
+- Used doubly robust ML, multilevel models, and simulation inside evidence-generation workflows rather than as stand-alone method demonstrations.
+- Worked with noisy observational data where validation and robustness were as important as the model itself.
+- Produced outputs that were strong enough for external review rather than only internal exploratory use.
 
-## Public Notebooks Currently In This Repository
+#### Why this is here
+
+This experience is earlier than the more deployment-facing work above, but it trained the same habits around formalizing messy problems, validating outputs, and making technically complex systems legible enough for other people to use.
+
+## Public Artifacts In This Repository
 
 ### [topic_themes.ipynb](topic_themes.ipynb)
 
-Representative artifact for creator-content theme extraction, clustering, centroid assignment, and retrieval-grounded theme naming.
+Representative artifact for creator-content theme extraction, clustering, centroid assignment, retrieval, and grounded theme naming.
 
 ### [causal_representation_learning.ipynb](causal_representation_learning.ipynb)
 
 Representative artifact for representation learning inside causal estimation workflows.
 
-## Cross-Project Themes
-
-Across these projects, the recurring patterns in my work are:
+## What This Portfolio Emphasizes
 
 - stakeholder-driven problem framing,
 - workflow design under ambiguity,
+- end-to-end delivery rather than model-only work,
 - human-in-the-loop AI systems,
 - hybrid structured and unstructured data integration,
 - validation and robustness discipline,
@@ -214,6 +231,6 @@ Across these projects, the recurring patterns in my work are:
 - Research projects are described not only as academic outputs, but also as workflow and system-design work.
 - This repository is intended to function as a portfolio of selected original work, not as a complete archive of every project artifact.
 
-## Current Repository Direction
+## Current Direction
 
-The next step for this repository is to continue expanding the public-facing artifact layer so that each project summary is paired, where possible, with a representative notebook, methodological note, or reproducible workflow component.
+The next step for this repository is to keep expanding the artifact layer so each project summary is paired, where possible, with a representative notebook, methodological note, or reproducible workflow component.
